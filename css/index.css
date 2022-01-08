@@ -1,0 +1,589 @@
+#body{
+	width: 1262px;
+	height: 2700px;
+	margin: 0 auto;
+	background-color:#F0F0F0;
+}
+/* 头部 */
+#banner{
+	width: 1262px;
+	height: 140px;
+	background-color: white;
+	margin: 0 auto;
+}
+#banner .top{
+	width: 1262px;
+	height: 90px;
+	/* background-color: bisque; */
+	padding-top:0px;
+	border-top: 1px solid lightgray;
+	border-bottom: 1px solid lightgray;
+}
+#banner .logo{
+	width: 170px;
+	height: 90px;
+	/* background-color: blueviolet; */
+	float: left;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+/* logo摇摆 */
+#banner .logo img{
+  width: 150px;
+  height: 150px;
+  margin-top: -40px;
+  /* 注释 名称  持续时间  延迟时间  动画显示方向 循环次数*/
+  animation: zy 2.5s .15s linear infinite;
+  -moz-animation: zy 2.5s .15s linear infinite; 
+ /* -webkit-animation: zy 2.5s .15s linear infinite;  Safari and Chrome
+    -o-animation: zy 2.5s .15s linear infinite;  Opera */
+} 
+/* zy动画名称必须与上面的对应 */
+@keyframes zy{
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(5deg);
+  }
+  40% {
+    transform: rotate(-5deg);
+  }
+  50%,100% {
+    transform: rotate(0deg);
+  }
+
+}
+/* 适应火狐浏览器,可以不写,写着更稳定 */
+@-moz-keyframes zy{
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(5deg);
+  }
+  40% {
+    transform: rotate(-5deg);
+  }
+  50%,100% {
+    transform: rotate(0deg);
+  }
+}
+/* @-webkit-keyframes zy{
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(5deg);
+  }
+  40% {
+    transform: rotate(-5deg);
+  }
+  50%,100% {
+    transform: rotate(0deg);
+  }
+}
+@-o-keyframes zy{
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(5deg);
+  }
+  40% {
+    transform: rotate(-5deg);
+  }
+  50%,100% {
+    transform: rotate(0deg);
+  }
+} */
+
+
+#banner .top .text{
+		width: 200px;
+		height: 70px;
+		background-color: lightblue;
+		font-size: 40px;
+		font-weight: 800;
+		color: white;
+		
+		margin-left: 135px;
+	    padding-right: 20px;
+		/* 设置padding值,盒子跟着变大 */
+	    padding-top: 20px;
+	    letter-spacing: 9px
+	}
+#banner .top .title ul{
+	list-style-type: none;
+	margin-top: -60px;
+	margin-left: 300px;
+  font-size: 25px;
+}
+#banner .top .title li{
+	display: inline;
+	padding-left: 70px;
+	
+}
+#banner .top a{
+  text-decoration: none;
+}
+/* 如何让设置列表的第一个链接不同颜色 */
+#banner .top a:first-child{
+	color: lightblue;
+}
+#banner .top a:link{
+  color: black;
+}
+/* 悬浮,鼠标指向一个链接,其他链接的字位置有影响 ，要消除影响必须把各个链接单独出来放在一个div中*/
+#banner .top a:hover{
+  color: lightblue;
+  /* font-size: 35px; */
+}
+#banner .top a:active{
+	color: lightcoral;
+}
+#banner .top a:visited{
+  color: lightgray;
+}
+#banner input[type="text"]{
+   width: 200px;
+   height: 30px;
+   font-size: 15px;
+   color: lightgray;
+   letter-spacing: 7px;
+   cursor: text;
+   
+ }
+ #banner input:focus{
+	 /* 浏览器兼容问题 */
+	 /* 外面的线不显示，四条边 */
+	 outline: none;
+	 border-width: 0px;
+	 border-bottom: 3px dotted lightblue;
+ }
+ #banner button{
+	 width: 50px;
+	 height: 35px;
+ }
+/* 图片据上面的距离不能再调 ，图片动*/
+#banner .top .userLogo{
+  width: 40px;
+  height: 40px;
+  margin-left: 990px;
+  margin-top:-30px;
+  padding-top: -10px;
+  float: none;
+}
+#banner .bottom{
+	width: 1262px;
+	height: 30px;
+	/* background-color: blueviolet; */
+	padding-bottom: 3px
+}
+#banner .bottom ul{
+	list-style-type: none;
+	margin-left: 160px;
+	font-size: 20px;
+}
+#banner .bottom li{
+	display: inline;
+	padding-left: 50px;
+}
+
+#banner .bottom a{
+  text-decoration: none;
+}
+/* 如何让设置列表的第一个链接不同颜色 */
+#banner .bottom a:first-child{
+	color: lightblue;
+}
+#banner .bottom a:link{
+  color: black;
+}
+
+#banner .bottom a:hover{
+  color: lightblue;
+}
+#banner .bottom a:active{
+	color: lightcoral;
+}
+#banner .bottom a:visited{
+  color: lightgray;
+}
+
+/* 如何让文本框与字的间距变大 */
+ #banner form{
+   margin-top: -56px;
+   margin-left: 890px;
+   font-size: 20px;
+ }
+/* 电音波浪 */
+ #first{
+	 width: 1200px;
+	 height: 200px;
+/* 	 background-color: #F08080; */
+	 
+ }
+ #first p{
+	 width:220px;
+	 height: 50px;
+	 padding-top: 6px;
+	 text-align: center;
+	 font-size: 30px;
+	 font-weight: 600;
+	 color: #3C3C3C;
+	 margin: 40px auto;
+	 letter-spacing: 20px;
+	 border-top: 5px double lightslategray ;
+	 border-bottom:  5px double lightslategrey;
+/* 	 text-decoration: line-through; */
+ }
+ #first .one{
+	 width: 250px;
+	 height: 250px;
+ }
+ #first .one audio{
+	 padding-top: 210px;
+	 padding-left:180px;
+	 width: 60px;
+	 display: none;
+ }
+ #first .one:hover audio{
+	 display: block;
+	 cursor: pointer;
+ }
+ #first #one{
+	 margin-left: 10px;
+	 background: url(../img/1.1.jpg);
+	 background-size: 100% 100%;
+ }
+ #first #two{
+ 	 margin-left: 310px;
+	 margin-top: -250px;
+	 background: url(../img/1.2.jpg);
+	 background-size: 100% 100%;
+ }
+ #first #three{
+ 	 margin-left: 620px;
+ 	 margin-top: -250px;
+	 background: url(../img/1.3.jpg);
+	 background-size: 100% 100%;
+ }
+ #first #four{
+ 	 margin-left: 930px;
+ 	 margin-top: -250px;
+	 background: url(../img/1.4.jpg);
+	 background-size: 100% 100%;
+ }
+ /* 迷幻摇滚 */
+ #second{
+ 	 width: 1200px;
+ 	 height: 200px;
+ 	 margin-top: 250px;
+ /* 	 background-color: #F08080; */
+ 	 
+  }
+  #second p{
+ 	 width:220px;
+ 	 height: 50px;
+ 	 padding-top: 6px;
+ 	 text-align: center;
+ 	 font-size: 30px;
+ 	 font-weight: 600;
+ 	 color: #3C3C3C;
+ 	 margin: 40px auto;
+ 	 letter-spacing: 20px;
+ 	 border-top: 5px double rosybrown ;
+ 	 border-bottom:  5px double rosybrown;
+ /* 	 text-decoration: line-through; */
+  }
+  #second .one{
+ 	 width: 250px;
+ 	 height: 250px;
+  }
+  #second .one audio{
+ 	 padding-top: 210px;
+ 	 padding-left:180px;
+ 	 width: 60px;
+ 	 display: none;
+  }
+  #second .one:hover audio{
+ 	 display: block;
+ 	 cursor: pointer;
+  }
+  #second #one{
+ 	 margin-left: 10px;
+ 	 background: url(../img/2.1.png);
+ 	 background-size: 100% 100%;
+  }
+  #second #two{
+  	 margin-left: 310px;
+ 	 margin-top: -250px;
+ 	 background: url(../img/2.2.jpg);
+ 	 background-size: 100% 100%;
+  }
+  #second #three{
+  	 margin-left: 620px;
+  	 margin-top: -250px;
+ 	 background: url(../img/2.3.jpg);
+ 	 background-size: 100% 100%;
+  }
+  #second #four{
+  	 margin-left: 930px;
+  	 margin-top: -250px;
+ 	 background: url(../img/2.4.jpg);
+ 	 background-size: 100% 100%;
+  }
+ /* 中国民谣 */
+  #third{
+ 	 width: 1200px;
+ 	 height: 200px;
+	 margin-top: 250px;
+ /* 	 background-color: #F08080; */
+ 	 
+  }
+  #third p{
+ 	 width:220px;
+ 	 height: 50px;
+ 	 padding-top: 6px;
+ 	 text-align: center;
+ 	 font-size: 30px;
+ 	 font-weight: 600;
+ 	 color: #3C3C3C;
+ 	 margin: 40px auto;
+ 	 letter-spacing: 20px;
+ 	 border-top: 5px double gray ;
+ 	 border-bottom:  5px double dimgrey;
+ /* 	 text-decoration: line-through; */
+  }
+  #third .one{
+ 	 width: 250px;
+ 	 height: 250px;
+  }
+  #third .one audio{
+ 	 padding-top: 210px;
+ 	 padding-left:180px;
+ 	 width: 60px;
+ 	 display: none;
+  }
+  #third .one:hover audio{
+ 	 display: block;
+ 	 cursor: pointer;
+  }
+  #third #one{
+ 	 margin-left: 10px;
+ 	 background: url(../img/3.1.jpg);
+ 	 background-size: 100% 100%;
+  }
+  #third #two{
+  	 margin-left: 310px;
+ 	 margin-top: -250px;
+ 	 background: url(../img/3.2.png);
+ 	 background-size: 100% 100%;
+  }
+  #third #three{
+  	 margin-left: 620px;
+  	 margin-top: -250px;
+ 	 background: url(../img/3.3.jpg);
+ 	 background-size: 100% 100%;
+  }
+  #third #four{
+  	 margin-left: 930px;
+  	 margin-top: -250px;
+ 	 background: url(../img/3.4.jpg);
+ 	 background-size: 100% 100%;
+  }
+  /* 经典老歌 */
+   #fourth{
+  	 width: 1200px;
+  	 height: 200px;
+  	 margin-top: 250px;
+  /* 	 background-color: #F08080; */
+  	 
+   }
+   #fourth p{
+  	 width:220px;
+  	 height: 50px;
+  	 padding-top: 6px;
+  	 text-align: center;
+  	 font-size: 30px;
+  	 font-weight: 600;
+  	 color: #3C3C3C;
+  	 margin: 40px auto;
+  	 letter-spacing: 20px;
+  	 border-top: 5px double brown ;
+  	 border-bottom:  5px double brown;
+  /* 	 text-decoration: line-through; */
+   }
+   #fourth .one{
+  	 width: 250px;
+  	 height: 250px;
+   }
+   #fourth .one audio{
+  	 padding-top: 210px;
+  	 padding-left:180px;
+  	 width: 60px;
+  	 display: none;
+   }
+   #fourth .one:hover audio{
+  	 display: block;
+  	 cursor: pointer;
+   }
+   #fourth #one{
+  	 margin-left: 10px;
+  	 background: url(../img/4.1.jpg);
+  	 background-size: 100% 100%;
+   }
+   #fourth #two{
+   	 margin-left: 310px;
+  	 margin-top: -250px;
+  	 background: url(../img/4.2.jpg);
+  	 background-size: 100% 100%;
+   }
+   #fourth #three{
+   	 margin-left: 620px;
+   	 margin-top: -250px;
+  	 background: url(../img/4.3.png);
+  	 background-size: 100% 100%;
+   }
+   #fourth #four{
+   	 margin-left: 930px;
+   	 margin-top: -250px;
+  	 background: url(../img/4.4.jpg);
+  	 background-size: 100% 100%;
+   }
+   /* 至乐 */
+    #fifth{
+   	 width: 1200px;
+   	 height: 200px;
+   	 margin-top: 250px;
+   /* 	 background-color: #F08080; */
+   	 
+    }
+    #fifth p{
+   	 width:220px;
+   	 height: 50px;
+   	 padding-top: 6px;
+   	 text-align: center;
+   	 font-size: 30px;
+   	 font-weight: 600;
+   	 color: #3C3C3C;
+   	 margin: 40px auto;
+   	 letter-spacing: 20px;
+   	 border-top: 5px double darkgreen;
+   	 border-bottom:  5px double darkgreen;
+   /* 	 text-decoration: line-through; */
+    }
+    #fifth .one{
+   	 width: 250px;
+   	 height: 250px;
+    }
+    #fifth .one audio{
+   	 padding-top: 210px;
+   	 padding-left:180px;
+   	 width: 60px;
+   	 display: none;
+    }
+    #fifth .one:hover audio{
+   	 display: block;
+   	 cursor: pointer;
+    }
+    #fifth #one{
+   	 margin-left: 10px;
+   	 background: url(../img/5.1.jpg);
+   	 background-size: 100% 100%;
+    }
+    #fifth #two{
+    	 margin-left: 310px;
+   	 margin-top: -250px;
+   	 background: url(../img/5.2.jpg);
+   	 background-size: 100% 100%;
+    }
+    #fifth #three{
+    	 margin-left: 620px;
+    	 margin-top: -250px;
+   	 background: url(../img/5.3.jpg);
+   	 background-size: 100% 100%;
+    }
+    #fifth #four{
+    	 margin-left: 930px;
+    	 margin-top: -250px;
+   	 background: url(../img/5.4.jpg);
+   	 background-size: 100% 100%;
+    }
+	/* 底部 */
+	#bottom{
+		width: 1262px;
+		height: 300px;
+		margin-top: 250px;
+		background-color: #778899;
+	}
+	#bottom h1{
+		font-size: 30px;
+		padding-top: 20px;
+	    padding-left: 20px;
+	    color: white;
+		}
+		/* 如何设置第第二个字 */
+		#bottom h1::first-letter{
+			font-size: 40px;
+			float: left;
+		}
+		/* lang:语言,()里面是不同国家语言的设置 */
+		#bottom p{
+			/* em:相对单位,字体大小相对于body的多少倍，1em一倍,2em二倍 */
+			font-size: 20px;
+			padding-left: 90px;
+		    color: white;
+			line-height: 40px;
+		}
+		#bottom .slogan{
+					width: 1000px;
+					height: 100px;
+					margin-left: 180px;
+					margin-top: -220px;
+					/* background-color: saddlebrown; */
+					}
+						
+		#bottom .slogan h2{
+			font-size: 40px;
+			color: white;
+			display: inline;
+			margin-left:250px;
+		}
+		#bottom .essay{
+			/* background-color: #006400; */
+		width: 800px;
+		height: 100px;
+	    margin-top: -20px;
+		padding-top: -10px;
+		padding-left: 390px;
+		}
+		#bottom .essay {
+			font-size: 13px;
+			/* margin-left: 100px;
+			margin-top: 90px; */
+			color: white;
+			text-decoration: underline;
+		}
+		/* button{
+			border:0px;
+			background-image: url(../img/1.ico);
+		}
+		input[type='button']{
+		 border:0px;
+		  background-image:linear-gradient(to top,#58a,#fb3);
+		} */
+		
